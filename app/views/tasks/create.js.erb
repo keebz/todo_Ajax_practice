@@ -1,0 +1,7 @@
+$('#new_link').show();
+$('#task_form').remove();
+
+
+<% @number = (@tasks.all.length) %>
+
+$('#list_tasks').append('<%= @number.to_s + ") " + @task.name%> <%= link_to "x", task_path(@task.id), method: "DELETE", class: "btn" %><br>');

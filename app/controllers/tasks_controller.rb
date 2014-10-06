@@ -11,8 +11,12 @@ class TasksController < ApplicationController
   end
 
   def create
+    @tasks = Task.all
     @task = Task.create(task_params)
-    redirect_to root_path
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js
+    end
   end
 
   def destroy
