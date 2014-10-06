@@ -1,11 +1,13 @@
 <h1>Tasks</h1>
 
+  <% @serial = 0 %>
   <% @tasks.each do |task| %>
-    <%= task.name %>
+    <% @serial = @serial + 1 %>
+    <%= @serial.to_s + ") " + task.name %>
     <%= link_to "x", task_path(task.id), method: "DELETE", class: "btn" %>
     <br>
   <%end%>
 
 <br>
 
-<%= link_to "Add Task", new_task_path, class: "btn btn-primary" %>
+<%= link_to "Add Task", new_task_path, id: "new_link", class: "btn btn-primary", remote: true %>
