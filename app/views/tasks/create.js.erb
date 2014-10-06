@@ -4,4 +4,8 @@ $('#task_form').remove();
 
 <% @number = (@tasks.all.length) %>
 
-$('#list_tasks').append('<div id="task<%=@task.id%>"><%= @number.to_s + ") " + @task.name%> <%= link_to "x", task_path(@task.id), method: "DELETE", class: "btn", remote: true %></div>');
+$('#list_tasks').append('<div id="task<%=@task.id%>" class="task"><%= @number.to_s + ") " + @task.name%> <%= link_to "x", task_path(@task.id), method: "DELETE", class: "btn", remote: true %></div>');
+
+$('.task').last().click(function() {
+  $(this).toggleClass('on off');
+});
