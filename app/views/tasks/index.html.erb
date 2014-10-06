@@ -1,7 +1,7 @@
 <h1>Tasks</h1>
 
   <% @tasks.each do |task| %>
-    <%= task.name %>
+    <%= task.name %> <%= link_to "x", task_path(task.id), method: "DELETE", class: "btn" %>
     <br>
   <%end%>
 
