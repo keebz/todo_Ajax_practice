@@ -1,5 +1,5 @@
 #Quick ToDo List
-This app is a clone of twitter. Users can tweet, tweet at other users, follow users, and search for users.
+This app is a quick to do list for users.
 
 ##Authors
 [Keebz](http://github.com/keebz)
