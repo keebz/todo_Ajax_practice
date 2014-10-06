@@ -18,19 +18,22 @@
 @import "bootstrap";
 li {list-style-type: none;}
 h1 {
-  color: white;
+
 }
 
 ul {
-  color: white;
+  font-family: courier;
+  border: solid;
+  border-radius: 5%;
+
 }
 
 .siteform {
-  color: white;
+
 }
 
 body {
-  background-image: url("wood.jpg");
+  background-image: url("glasses.jpg");
   background-repeat: no-repeat;
   background-size:100%;
 }
