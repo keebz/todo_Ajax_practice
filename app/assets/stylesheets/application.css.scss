@@ -27,9 +27,12 @@ ul {
   border-radius: 5%;
 
 }
+ul:hover {
+  cursor: pointer;
+}
 
-.siteform {
-
+.on {
+  text-decoration: line-through;
 }
 
 body {

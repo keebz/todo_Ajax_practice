@@ -4,14 +4,21 @@
   <ul id="list_tasks">
     <% @tasks.each do |task| %>
       <div id="task<%=task.id%>">
-        <% @serial = @serial + 1 %>
-        <%= @serial.to_s + ") " + task.name %>
-        <%= link_to "x", task_path(task.id), method: "DELETE", class: "btn", remote: true %>
+        <span class="task">
+          <% @serial = @serial + 1 %>
+          <%= @serial.to_s + ") " + task.name %>
+        </span>
+          <%= link_to "x", task_path(task.id), method: "DELETE", class: "btn", remote: true %>
         <br>
       </div>
     <%end%>
   </ul>
-
 <br>
 
 <%= link_to "Add Task", new_task_path, id: "new_link", class: "btn btn-primary", remote: true %>
+
+<script>
+  $('.task').click(function() {
+      $(this).toggleClass('on off');
+  });
+</script>
