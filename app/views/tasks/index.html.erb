@@ -3,10 +3,12 @@
   <% @serial = 0 %>
   <ul id="list_tasks">
     <% @tasks.each do |task| %>
-      <% @serial = @serial + 1 %>
-      <%= @serial.to_s + ") " + task.name %>
-      <%= link_to "x", task_path(task.id), method: "DELETE", class: "btn" %>
-      <br>
+      <div id="task<%=task.id%>">
+        <% @serial = @serial + 1 %>
+        <%= @serial.to_s + ") " + task.name %>
+        <%= link_to "x", task_path(task.id), method: "DELETE", class: "btn", remote: true %>
+        <br>
+      </div>
     <%end%>
   </ul>
 
