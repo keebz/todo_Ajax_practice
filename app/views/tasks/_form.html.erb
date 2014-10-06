@@ -1,0 +1,9 @@
+<%= form_for(@task) do |f| %>
+      <div class="form-group">
+          <h4>Task Description:
+          <% f.label :name %>
+          <%= f.text_field :name %>
+        </h4>
+      </div>
+      <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
