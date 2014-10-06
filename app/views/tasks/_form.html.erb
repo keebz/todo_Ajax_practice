@@ -1,6 +1,6 @@
 <%= form_for @task, remote: true do |f| %>
       <div class="form-group">
-        <h4>Task Description:
+        <h4><span class="siteform">Task Description:</span>
           <% f.label :name %>
           <%= f.text_field :name %>
         </h4>
